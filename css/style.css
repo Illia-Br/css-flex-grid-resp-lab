@@ -53,12 +53,41 @@ img {
 
 #occupation {
   background-color: rgb(245, 241, 241);
+  padding: 5px 0 10px;
+}
+
+#offer {
+  padding: 20px 0;
+}
+
+#occupation>p, #offer>p {
+  margin: 2% auto;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact>p {
+  margin: 0;
+  width: 50%;
+  height: 50px;
 }
 
 #contact p:nth-child(1) {
   background-color: rgb(155, 240, 155);
+  padding-top: 15px;
 }
 
 #contact p:nth-child(2) {
   background-color: rgb(73, 206, 73);
+  padding-top: 17px;
 }
+
+#brand {
+  display: none;
+}
+
+
