@@ -66,24 +66,23 @@ img {
 
 #contact {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #contact>p {
   margin: 0;
   width: 50%;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact p:nth-child(1) {
   background-color: rgb(155, 240, 155);
-  padding-top: 15px;
 }
 
 #contact p:nth-child(2) {
   background-color: rgb(73, 206, 73);
-  padding-top: 17px;
 }
 
 #brand {
@@ -91,3 +90,62 @@ img {
 }
 
 
+@media only screen and (min-width: 768px) {
+  main {
+    display: grid;
+    width: 500px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "status name"
+      "image occupation"
+      "image brand"
+      "contact offer"
+  }
+  
+  #status {
+    grid-area: status;
+    text-align: left;
+    margin-left: 4%;
+    margin-top: 5%;
+  }
+
+  img {
+    grid-area: image;
+    margin: 0 auto;
+  }
+  
+  #contact {
+    grid-area: contact;
+    margin-top: 11%;
+  }
+
+  #brand {
+    display: flex;
+    grid-area: brand;
+  }
+
+  #brand>p {
+    border-left: solid 2px rgb(73, 206, 73);
+    padding-left: 10px;
+    line-height: 2;
+    color: grey;
+  }
+
+  #brand, #offer, #occupation {
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 0;
+  }
+
+  #name, #offer, #brand {
+    background-color: rgb(245, 241, 241);
+  }
+
+  #name {
+    text-align: left;
+    padding: 20px 0 0 20px;
+    margin: 0;
+  }
+}
